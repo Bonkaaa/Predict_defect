@@ -1,0 +1,40 @@
+﻿Just-in-Time Defect Prediction
+Problem Statement:
+Software defects (or software bugs) can have a significant impact on the entire software development lifecycle, affecting many aspects from the reliability and performance of the final product to the efficiency and morale of development teams. Defects that go unnoticed until later stages of development or, worse, after deployment, can lead to costly rework, delayed releases, and even critical system failures. For developers, these issues translate into increased pressure, frustration, and reduced productivity, as they must pay their attention from building new features to tracking down and fixing bugs.  
+In the last decade, Just-in-Time (JIT) Defect Prediction has been emerging as a potential solution to address this problem. JIT Defect Prediction focuses on identifying potential defects at the moment they are introduced, during the coding or commit phase, before the code is merged into the main branch. By predicting defects early, this approach enables developers to address issues immediately, preventing them from becoming more complex and costly to fix later. 
+Problem Formulation:
+Input: A set of commits . Each commit  contains a set of features which are extracted from relevant information of   such as commit code changes, authors, etc.
+Output: A set of associating probability  for input commits, where  indicate the likelihood that commit  introduce a defect. 
+Task Description
+Your task is to build a machine learning model to predict  for  given  . The model will be trained on historical data and will be used to predict new data. 
+* Main Deliverables: A ML-based technique for predicting defects in a commit based on relevant features
+* Stretch Deliverables: 
+   * A detailed analysis on dataset using data exploration techniques such as correlation analysis
+   * A comparison between different ML models for JIT Defect Prediction
+* Evaluation Metrics:
+   * AUC Score
+   * F1 Score
+   * Precision
+   * Recall
+Dataset Information:
+Features. The dataset includes several key metrics related to software changes, which are categorized into 14 dimensions:
+* NS: Number of modified subsystems
+* ND: Number of modified directories
+* NF: Number of modified files
+* Entropy: Distribution of modified code across each file
+* LA: Lines of code added
+* LD: Lines of code deleted
+* LT: Lines of code in a file before the change
+* FIX: Whether or not the change is a defect fix 
+* NDEV: The number of developers that changed the modified files
+* AGE: The average time interval between the last change and the current change
+* NUC: The number of unique changes to the modified files
+* EXP: Developer experience
+* REXP: Recent developer experience
+* SEXP: Developer experience on a subsystem
+Dataset Structure & Format: JIT DP Dataset is stored in jitdp-dataset folder including 5 folders for five programming languages: python, javascript, java, cpp, c. For each datascript, the dataset are splitted into three CSV files for training, testing, validation. Each CSV files have the following columns:
+* _id : commit hash of a commit which is used to identify commit
+* 14 features columns, e.g, ns, nd, …, contains 14 above features extracted from commits
+* bug: indicate if a commit is defective or not. 1 is defective and 0 is non-defective
+Acknowledgments:
+This dataset is part of a study conducted to advance the understanding and practical application of JIT quality assurance. The data has been carefully curated from 5 programming languages, all of which are top 10 open-source projects with high starts from GitHub to provide comprehensive insights into the effectiveness of JIT defect prediction models.
