@@ -1,0 +1,3 @@
+In software development, defects and bugs can significantly hinder progress, affecting both product quality and developer well-being. Undetected issues in early stages often lead to extensive rework, increased costs, delayed releases, and developer burnout. Just-in-Time Defect Prediction (JITDP) is a tool designed to tackle this problem by identifying defects early in the development cycle, helping to decrease the stress for developers as well as cost-efficiency method for corporations also. 
+
+This project will aim to build a classification model that predicts defects based on several factors but mainly focus on optimizing data preprocessing to achieve the best model and reduce computation time. 
